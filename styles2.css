@@ -1,0 +1,656 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+/* Header Styling */
+header {
+    position: sticky;
+    top: 0; /* Sticks to the top of the viewport */
+    z-index: 1000; /* Ensures it stays above other elements */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: 100px; /* Set a fixed height to stabilize header layout */
+}
+
+header .logo {
+    position: absolute; /* Remove logo from normal flex flow */
+    left: 20px; /* Adjust to position the logo on the left */
+}
+
+header .logo img {
+    height: 100px; /* Increase the size of the logo */
+    width: auto;
+    object-fit: contain; /* Ensures the image fits without distortion */
+}
+
+.cart a {
+    text-decoration: none;
+    color: #ff14b5;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+/* Navigation Bar */
+nav {
+    flex: 1; /* Allow nav to take up the center space */
+    display: flex;
+    justify-content: center; /* Center nav links horizontally */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    position: relative;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #FF1493;
+}
+
+/* Dropdown Menu */
+nav ul .dropdown {
+    display: none;
+    position: absolute;
+    top: 40px; /* Space below parent item */
+    left: 0;
+    background-color: #ff14b5;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    width: 200px;
+}
+
+nav ul .dropdown li {
+    display: block;
+    text-align: left;
+}
+
+nav ul .dropdown a {
+    padding: 10px 20px;
+    color: #333;
+    display: block;
+}
+
+nav ul .dropdown a:hover {
+    background-color: #f4f4f4;
+    color: #ff14b5;
+}
+
+nav li:hover .dropdown {
+    display: block;
+    transition: all 0.3s ease;
+}
+
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 0px 0px;
+    background-color: 000;
+    padding-bottom: 0;
+    margin: 0px;
+}
+
+.hero p {
+    color: #ff14b5;
+    font-size: large;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: #ff14b5;
+    margin-bottom: 0px;
+}
+
+
+.btn {
+    background-color: #ff14b5;
+    color: #fff;
+    padding: 10px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ff14b5;
+}
+
+/* Section Styling */
+section {
+    margin-bottom: 0px; /* Consistent space between sections */
+    padding: 0; /* Remove unnecessary padding */
+background-color: #f9f9f9;
+}
+
+/* Category Grid */
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns of equal width */
+    gap: 10px; /* Consistent gap between grid items */
+    padding: 10px; /* Inner padding for the grid container */
+    background-color: #fff; /* Optional background color */
+}
+
+.carousel, .carousel-reviews {
+    background-color: #f0f0f0; /* Light gray background for carousels */
+    padding: 20px; /* Space around the content */
+    border-radius: 10px; /* Optional rounded corners for a modern look */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.carousel .item, .carousel-reviews .review-item {
+    background-color: #ffffff; /* White background for items */
+    padding: 15px; /* Space inside each item */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+.category-grid {
+    background-color: #fff3f3; /* Light gray background for grids */
+    padding: 20px; /* Space around the grid */
+    border-radius: 10px; /* Optional rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+section {
+    background-color: #fff3f3; /* Light gray background for the entire section */
+    padding: 30px; /* Add spacing inside the section */
+    border-radius: 10px; /* Optional rounded corners for the section */
+    margin: 0px auto; /* Center the section and add spacing from other content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional subtle shadow for depth */
+}
+
+/* Category Card */
+.category-card {
+    display: flex;
+    flex-direction: column; /* Arrange content vertically */
+    justify-content: space-between; /* Distribute content evenly */
+    padding: 10px; /* Inner padding for each card */
+    background-color: #f9f9f9; /* Optional background for clarity */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Category Card Images */
+.category-card img {
+    width: 100%; /* Full width of the container */
+    height: 300px; /* Fixed height for consistent layout */
+    object-fit: cover; /* Ensure images maintain aspect ratio */
+    border-radius: 10px; /* Match card corners */
+    transition: transform 0.3s ease; /* Smooth zoom effect */
+}
+
+/* Image Hover Effect */
+.category-card img:hover {
+    transform: scale(1.05); /* Zoom effect */
+}
+
+/* Category Card Titles */
+.category-card h3 {
+    text-align: center;
+    margin-top: 10px;
+    color: #ff14b5; /* Accent color for titles */
+    font-size: 1.2rem; /* Font size */
+}
+
+
+/* TikTok Guide */
+.tiktok-guide {
+    text-align: center;
+    padding: 50px;
+    background-color: #fff3f3;
+}
+
+.tiktok-guide p {
+    margin: 10px 0 20px;
+    font-size: 1rem;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+
+footer a {
+    color: #ff14b5;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #e01183;
+}
+h2 {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 0px;
+    background-color: #fff3f3;
+}
+
+/* Track Container */
+.carousel-track-container {
+    overflow: hidden;
+    position: relative;
+}
+
+/* Carousel Track */
+.carousel-track {
+    display: flex; /* Align slides horizontally */
+    transition: transform 0.5s ease-in-out; /* Smooth slide transitions */
+}
+
+/* Placeholders for Missing Images */
+.image-placeholder {
+    width: 100%;
+    height: 300px; /* Adjust as needed */
+    background-color: #ff14b5; /* Bright placeholder background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
+    border: 1px dashed #ddd;
+    border-radius: 5px;
+}
+
+/* Carousel Buttons */
+.carousel-button {
+    position: absolute;
+    top: 300%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust for perfect centering */
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    border: none;
+    color: #fff;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+    display: none; /* Add flex to center icon within button */
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Left Button */
+.carousel-button--left {
+    left: 10px;
+}
+
+/* Right Button */
+.carousel-button--right {
+    right: 10px;
+}
+
+/* Hide Buttons if Needed */
+.carousel-button.is-hidden {
+    display: none;
+}
+
+.hero {
+    position: relative;
+    text-align: center; /* Center-align the content */
+    padding: 50px 20px; /* Add spacing */
+    background-image: url('cityscape.jpg'); /* Replace with your background image */
+    background-size: cover; /* Ensure the background covers the entire section */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the background from repeating */
+    background-color: #f4f4f4; /* Fallback color if the image fails to load */
+    color: #000; /* Set text color for contrast */
+}
+
+.hero img {
+    width: 100%; /* Ensure image scales with the container */
+    max-width: 800px; /* Optional: Limit the image's maximum width */
+    margin: 0 auto; /* Center the image horizontally */
+    display: block;
+}
+
+.hero p {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.hero .btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #FF1493; /* Button color */
+    color: #fff; /* Text color */
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.hero .btn:hover {
+    background-color: #e01183; /* Darker pink on hover */
+}
+
+
+.carousel-track-container {
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+
+.item img {
+    width: 100%; /* Ensure the image scales with the container */
+    max-width: 150px; /* Optional: Limit the maximum image size */
+    margin: 0 auto;
+    display: block;
+}
+
+.item .price {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #000;
+    font-weight: bold;
+}
+
+.item .add-to-cart {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #FF1493;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.item .add-to-cart:hover {
+    background-color: #e01183;
+}
+
+.carousel2 {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+    background-color: #ff14b5;
+    
+}
+
+.carousel-track-container {
+    overflow: hidden;
+    position: relative;
+    color: #e01183;;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    display: flex; /* Display items side by side on a slide */
+    justify-content: space-around; /* Add equal spacing between items */
+    min-width: 100%; /* Each slide takes full width */
+    box-sizing: border-box;
+}
+
+.item {
+    text-align: center; /* Center content within each item */
+    flex: 1; /* Equal width for all items */
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.item img {
+    width: 250px; /* Fixed width */
+    height: 150px; /* Fixed height */
+    object-fit: cover; /* Ensure the image fills the space while maintaining aspect ratio */
+    display: block;
+    margin: 0 auto; /* Center the image horizontally */
+    border-radius: 5px; /* Optional: Rounded corners for the images */
+}
+
+.item .price {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #000;
+    font-weight: bold;
+}
+
+.item .add-to-cart {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #FF1493; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.item .add-to-cart:hover {
+    background-color: #e01183; /* Darker pink on hover */
+}
+
+
+.carousel-button--left {
+    left: 10px;
+}
+
+.carousel-button--right {
+    right: 10px;
+}
+
+.carousel-button.is-hidden {
+    display: none;
+}
+
+#customer-reviews {
+    margin-top: 0px;
+    text-align: center;
+    padding: 20px;
+    background-color: #fff3f3; /* Light background for reviews */
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+#customer-reviews h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #333;
+}
+
+.carousel-reviews .carousel-track-container {
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+    max-width: 600px; /* Limit width for readability */
+    color: #e01183;;
+}
+
+.carousel-reviews .carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-reviews .carousel-slide {
+    display: flex;
+    justify-content: center;
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.review-item {
+    text-align: center;
+    padding: 20px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.review-text {
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.review-author {
+    font-weight: bold;
+    color: #333;
+}
+
+.carousel-button--left {
+    left: 10px; /* Adjust for spacing from the edge */
+}
+
+.carousel-button--right {
+    right: 10px; /* Adjust for spacing from the edge */
+}
+
+.carousel-button.is-hidden {
+    visibility: hidden; /* Use visibility for smooth transitions */
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Smooth sliding effect */
+}
+
+/* Carousel Items (Reusable with Category Card Styles) */
+.carousel .item {
+    display: flex;
+    flex-direction: column; /* Arrange content vertically */
+    justify-content: space-between; /* Distribute content evenly */
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+/* Carousel Images */
+.carousel .item img {
+    width: 100%; /* Full width of the container */
+    height: 300px; /* Fixed height for consistent layout */
+    object-fit: cover; /* Ensure images maintain aspect ratio */
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effect for Carousel Images */
+.carousel .item img:hover {
+    transform: scale(1.05); /* Zoom effect */
+}
+
+/* Carousel Item Titles */
+.carousel .item p.price {
+    text-align: center;
+    margin-top: 10px;
+    color: #ff14b5; /* Accent color for titles */
+    font-size: 1.2rem;
+}
+
+/* Carousel Add-to-Cart Button */
+.carousel .item button.add-to-cart {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #ff14b5;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.carousel .item button.add-to-cart:hover {
+    background-color: #e01183; /* Darker pink on hover */
+}
+
+/* Carousel Reviews (Customer Carousel Specific Styling) */
+.carousel-reviews {
+    padding: 20px;
+    background-color: #f9f9f9; /* Optional light background for reviews */
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-reviews .review-item {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Center the Carousel Container */
+.carousel {
+    display: flex; /* Use Flexbox for layout */
+    justify-content: center; /* Center items horizontally */
+    gap: 50px; /* Space between carousel items (2 inches ~ 50px) */
+    padding: 10px; /* Inner padding around the carousel */
+    background-color: #e01183;
+    border-radius: 10px; /* Optional rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin: 0 auto; /* Center the carousel container */
+    max-width: 90%; /* Optional: Limit the carousel width */
+}
+
+/* Carousel Slide Styling */
+.carousel .item {
+    flex: 0 0 auto; /* Ensure items maintain their width */
+    display: flex;
+    flex-direction: column; /* Arrange content vertically */
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 200px; /* Set consistent width for items */
+}
