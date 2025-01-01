@@ -13,19 +13,20 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 50px;
+    padding: 10px 10%;
     background-color: #fff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    height: 100px; /* Set a fixed height to stabilize header layout */
+   
 }
 
 header .logo {
     position: absolute; /* Remove logo from normal flex flow */
-    left: 20px; /* Adjust to position the logo on the left */
+    left: 5%; /* Adjust to position the logo on the left */
+    padding-top: 2%;
 }
 
 header .logo img {
-    height: 100px; /* Increase the size of the logo */
+    max-height: 10vh; /* Increase the size of the logo */
     width: auto;
     object-fit: contain; /* Ensures the image fits without distortion */
 }
@@ -47,7 +48,7 @@ nav {
 nav ul {
     display: flex;
     list-style: none;
-    gap: 30px;
+    gap: 2rem;
     margin: 0;
     padding: 0;
 }
@@ -106,7 +107,7 @@ nav li:hover .dropdown {
 /* Hero Section */
 .hero {
     text-align: center;
-    padding: 0px 0px;
+    padding: 5% 5%;
     background-color: 000;
     padding-bottom: 0;
     margin: 0px;
@@ -114,11 +115,11 @@ nav li:hover .dropdown {
 
 .hero p {
     color: #ff14b5;
-    font-size: large;
+    font-size: 5rem;
 }
 
 .hero h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: #ff14b5;
     margin-bottom: 0px;
 }
@@ -127,7 +128,7 @@ nav li:hover .dropdown {
 .btn {
     background-color: #ff14b5;
     color: #fff;
-    padding: 10px 25px;
+    padding: .5rem 1.5rem;
     text-decoration: none;
     border-radius: 5px;
     font-size: 1rem;
@@ -149,33 +150,33 @@ background-color: #f9f9f9;
 .category-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 columns of equal width */
-    gap: 10px; /* Consistent gap between grid items */
-    padding: 10px; /* Inner padding for the grid container */
+    gap: 1%; /* Consistent gap between grid items */
+    padding: 2%; /* Inner padding for the grid container */
     background-color: #fff; /* Optional background color */
 }
 
 .carousel, .carousel-reviews {
     background-color: #f0f0f0; /* Light gray background for carousels */
-    padding: 20px; /* Space around the content */
+    padding: 3%; /* Space around the content */
     border-radius: 10px; /* Optional rounded corners for a modern look */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 .carousel .item, .carousel-reviews .review-item {
     background-color: #ffffff; /* White background for items */
-    padding: 15px; /* Space inside each item */
+    padding: 2.5%; /* Space inside each item */
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 .category-grid {
     background-color: #fff3f3; /* Light gray background for grids */
-    padding: 20px; /* Space around the grid */
+    padding: 4%; /* Space around the grid */
     border-radius: 10px; /* Optional rounded corners */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 section {
     background-color: #fff3f3; /* Light gray background for the entire section */
-    padding: 30px; /* Add spacing inside the section */
+    padding: 6%; /* Add spacing inside the section */
     border-radius: 10px; /* Optional rounded corners for the section */
     margin: 0px auto; /* Center the section and add spacing from other content */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional subtle shadow for depth */
@@ -186,7 +187,7 @@ section {
     display: flex;
     flex-direction: column; /* Arrange content vertically */
     justify-content: space-between; /* Distribute content evenly */
-    padding: 10px; /* Inner padding for each card */
+    padding: 1%; /* Inner padding for each card */
     background-color: #f9f9f9; /* Optional background for clarity */
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
@@ -195,7 +196,7 @@ section {
 /* Category Card Images */
 .category-card img {
     width: 100%; /* Full width of the container */
-    height: 300px; /* Fixed height for consistent layout */
+    height: 25rem; /* Fixed height for consistent layout */
     object-fit: cover; /* Ensure images maintain aspect ratio */
     border-radius: 10px; /* Match card corners */
     transition: transform 0.3s ease; /* Smooth zoom effect */
@@ -231,7 +232,7 @@ section {
 footer {
     background-color: #333;
     color: #fff;
-    padding: 20px;
+    padding: 3%;
     text-align: center;
     font-size: 0.9rem;
 }
@@ -295,7 +296,7 @@ h2 {
     background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
     border: none;
     color: #fff;
-    padding: 15px;
+    padding: 4%;
     cursor: pointer;
     border-radius: 50%;
     z-index: 10;
@@ -323,7 +324,7 @@ h2 {
 .hero {
     position: relative;
     text-align: center; /* Center-align the content */
-    padding: 50px 20px; /* Add spacing */
+    padding: 5% 5%; /* Add spacing */
     background-image: url('cityscape.jpg'); /* Replace with your background image */
     background-size: cover; /* Ensure the background covers the entire section */
     background-position: center; /* Center the background image */
@@ -348,7 +349,7 @@ h2 {
 .hero .btn {
     display: inline-block;
     margin-top: 20px;
-    padding: 10px 20px;
+    padding: .5rem 1.5rem;
     background-color: #FF1493; /* Button color */
     color: #fff; /* Text color */
     text-decoration: none;
@@ -375,7 +376,7 @@ h2 {
 
 .item img {
     width: 100%; /* Ensure the image scales with the container */
-    max-width: 150px; /* Optional: Limit the maximum image size */
+    max-width: 10rem; /* Optional: Limit the maximum image size */
     margin: 0 auto;
     display: block;
 }
