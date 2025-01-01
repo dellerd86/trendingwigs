@@ -654,3 +654,36 @@ h2 {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     width: 200px; /* Set consistent width for items */
 }
+@media (max-width: 768px) {
+    body {
+      font-size: 16px;
+      padding: 10px;
+    }
+    .navbar {
+      flex-direction: column;
+    }
+    .image {
+      width: 100%;
+    }
+  
+  img, video {
+    max-width: 100%;
+    height: auto;
+  }
+  header {
+    flex-direction: column;
+    padding: 10px 2%;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  nav ul {
+    gap: 10px;
+  }
+  .category-card img {
+    height: auto;
+  }
+  footer {
+    padding: 10px;
+  }
+}
