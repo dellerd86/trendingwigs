@@ -11,23 +11,26 @@ header {
     top: 0; /* Sticks to the top of the viewport */
     z-index: 1000; /* Ensures it stays above other elements */
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 10%;
+    padding: 2%;
     background-color: #fff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
    
 }
 
 header .logo {
-    position: absolute; /* Remove logo from normal flex flow */
+    position: static; /* Remove logo from normal flex flow */
+    max-width: 20%;
     left: 5%; /* Adjust to position the logo on the left */
-    padding-top: 2%;
+    padding-top: 0%;
 }
 
 header .logo img {
     max-height: 10vh; /* Increase the size of the logo */
-    width: auto;
+    width: 100%;
+    height: auto;
     object-fit: contain; /* Ensures the image fits without distortion */
 }
 
@@ -51,6 +54,8 @@ nav ul {
     gap: 2rem;
     margin: 0;
     padding: 0;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 nav li {
@@ -196,10 +201,12 @@ section {
 /* Category Card Images */
 .category-card img {
     width: 100%; /* Full width of the container */
-    height: 25rem; /* Fixed height for consistent layout */
+    /*height: 25rem; /* Fixed height for consistent layout */
+    height: auto;
     object-fit: cover; /* Ensure images maintain aspect ratio */
     border-radius: 10px; /* Match card corners */
     transition: transform 0.3s ease; /* Smooth zoom effect */
+    aspect-ratio: 4 / 3;
 }
 
 /* Image Hover Effect */
@@ -570,6 +577,8 @@ h2 {
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     width: 100%;
+    flex: 1;
+    max-width: 30%;
 }
 
 /* Carousel Images */
@@ -679,12 +688,19 @@ h2 {
     font-size: 2rem;
   }
   nav ul {
-    gap: 10px;
+    gap: 5px;
   }
   .category-card img {
     height: auto;
   }
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
   footer {
     padding: 10px;
+  }
+  .carousel .item {
+    flex: 1 0 calc(100% / 2 - 10px);
+    max-width: 48%;
   }
 }
